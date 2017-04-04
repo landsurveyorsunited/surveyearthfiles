@@ -1,0 +1,17 @@
+x$(document).ready(function() {  if(ning.CurrentProfile == null){ x$('BODY DIV.date-count-down').show();  x$('DIV.date-count-down-2, DIV.Geo.signUpPage-signUpForm, A#date-count-down.button').hide();  } if ((ning.CurrentProfile != null)){ x$('DIV.date-count-down-2, A#date-count-down2.button, DIV.Geo.signUpPage-signUpForm').hide(); x$('.isAdmin  A#date-count-down.button.isAdmin').show(); }
+x$('A#date-count-down, A#date-count-down1').live('click', function(geocom) {      x$('DIV.date-count-down, A#date-count-down.button').toggle('show'); }); x$('A#date-count-down2.button').live('click', function(geocom) {      x$('DIV.date-count-down-2').toggle('show'); });
+x$('A#date-count-down3.button').live('click', function(geocom) {      x$('DIV.Geo.signUpPage-signUpForm').toggle('show'); }); });
+function GEOHTMLpu(elString, parent) {
+	var div = document.createElement("div");
+	div.id = 'geo_html_jspu';
+	div.innerHTML = elString;
+	document.querySelector(parent || "body").appendChild(div.firstChild);}
+GEOHTMLpu( '<div class="date-count-down" style="display:none;"><a id="date-count-down1" class="button">X</a><BR><p class="date-count-down-top-big">Welcome to</p><p class="your-text">If you would like to become a member<BR><P class="date-count-down-bottom-big"><a id="date-count-down3" class="button">Sign-Up</a></p></p><div class="Geo signUpPage-signUpForm"><h3 class="form-legend">Create a new account�</h3><form class="form1" action="/main/authorization/doSignUp?" method="post" novalidate="novalidate"><div class="form-field"><label for="signup_email">Email Address</label> <input name="emailAddress" value="" id="signup_email" class="input-full" maxlength="320" type="email" ></input></div><div class="form-field"><label for="signup_password">Password</label> <input name="password" value="" id="signup_password" class="input-full" maxlength="64" type="password" ></input></div><div class="form-field"><label for="signup_password_confirm">Retype Password</label> <input name="passwordConfirmation" value="" id="signup_password_confirm" class="input-full" maxlength="64" type="password" ></input></div><div id="submitContainer" class="form-actions"><input class="button button-primary" value="Sign Up" type="submit" ></input></div></form></div><div class="date-count-down-2"><form class="form1" action="/main/authorization/doSignIn" method="post" novalidate="novalidate"><input name="xg_token" value="" type="hidden" /><div class="form-field "><br /> <label for="signin_email">Email Address</label><br /> <input name="emailAddress" value="" id="signin_email" class="input-full" type="email" /></div><div class="form-field "><br /> <label for="signin_password">Password</label><br /> <input name="password" value="" id="signin_password" class="input-full" type="password" /></div><div class="form-actions"><input class="button button-primary" value="Sign In" type="submit" /></div></form></div><a id="date-count-down2" class="button">or Sign-In</a></div>' );
+GEOHTMLpu( '<a id="date-count-down" class="button isAdmin"  style="display:none;">Welcome Surveyor</a>' );
+var GEOCOMpu = document.getElementsByTagName("body")[0];
+var GEONodepu = document.createElement('link');
+GEONodepu.type = 'text/css';
+GEONodepu.rel = 'stylesheet';
+GEONodepu.media = 'screen';
+GEOCOMpu.appendChild(GEONodepu);
+GEONodepu.href = 'http://api.ning.com:80/files/-M5JLAFxn1Gp95uLP5WoPLNP30MqbeaKDGYi3D4L5TlPyjyvJIZChcKLx18AZqzWlUNf*u8R4dS*KWkLbBSeBVlAJIYkTkVA/N_C_D.css';
